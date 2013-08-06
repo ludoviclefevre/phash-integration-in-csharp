@@ -1,5 +1,5 @@
-phash-integration-in-csharp
-===========================
+pHash Integration in C#
+=======================
 
 This is a sample project to show how to integrate pHash library in a C# project.
 
