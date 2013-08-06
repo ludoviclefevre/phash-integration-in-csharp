@@ -14,8 +14,8 @@ namespace pHashTestApplication
         static void Main()
         {
             ulong hash1 = 0, hash2 = 0;
-            ph_dct_imagehash(Path.Combine(Environment.CurrentDirectory, "image1.jpg"), ref hash1);
-            ph_dct_imagehash(Path.Combine(Environment.CurrentDirectory, "image2.jpg"), ref hash2);
+            ph_dct_imagehash(Path.Combine(Environment.CurrentDirectory, "image.jpg"), ref hash1);
+            ph_dct_imagehash(Path.Combine(Environment.CurrentDirectory, "differentImage.jpg"), ref hash2);
             var distance = ph_hamming_distance(hash1, hash2);
             Console.WriteLine("Hamming distance : {0}", distance);
         }
