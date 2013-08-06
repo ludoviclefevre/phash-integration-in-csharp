@@ -87,6 +87,9 @@ typedef unsigned int uint32_t;
 extern "C" {
 #endif
 
+__declspec(dllexport) int ph_dct_imagehash(const char* file,ulong64 &hash);
+__declspec(dllexport) int ph_hamming_distance(ulong64 hasha, ulong64 hashb);
+
 const int MaxFileSize = (1<<30); /* 1GB file size limit (for mvp files) */
 const off_t HeaderSize = 64;     /* header size for mvp file */
 
@@ -140,9 +143,6 @@ struct BinHash
 		return 0;
 	}	
 };
-
-__declspec(dllexport) int ph_dct_imagehash(const char* file,ulong64 &hash);
-__declspec(dllexport) int ph_hamming_distance(ulong64 hasha, ulong64 hashb);
 
 BinHash* _ph_bmb_new(uint32_t bytelength);
 void ph_bmb_free(BinHash *binHash);
